@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariel Víctor Martinez - Currículum Profesional</title>
+    <meta name="description" content="Currículum de Ariel Víctor Martinez, Operaciones y Seguridad Industrial.">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        :root {
+            --primary-color: #020617; 
+            --secondary-color: #38bdf8; 
+            --bg-body: #0f172a; 
+            --bg-card: #1e293b; 
+            --text-main: #e2e8f0; 
+            --text-light: #94a3b8; 
+            --border-color: #334155; 
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: #f8fafc;
+            padding: 4rem 3rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.02));
+            transform: skewX(-15deg);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+            color: #94a3b8;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding-top: 1.5rem;
+        }
+
+        .contact-info a {
+            color: #e2e8f0;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            color: var(--secondary-color);
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 2.2fr;
+            gap: 2.5rem;
+        }
+
+        @media (max-width: 850px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 2.5rem 1.5rem;
+            }
+            h1 { font-size: 2.2rem; }
+            .contact-info { gap: 1rem; flex-direction: column; }
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--border-color);
+            display: inline-block;
+        }
+
+        .extracto p {
+            color: var(--text-main);
+            text-align: justify;
+            font-size: 1rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .skill-tag {
+            background-color: #0f172a;
+            color: #bae6fd;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+        }
+
+        .skill-tag:hover {
+            border-color: var(--secondary-color);
+            color: var(--secondary-color);
+            background-color: #1e293b;
+        }
+
+        .cert-list {
+            list-style: none;
+        }
+
+        .cert-list li {
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .cert-list li::before {
+            content: '•';
+            color: var(--secondary-color);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -0.3rem;
+        }
+
+        .cert-list strong {
+            display: block;
+            color: #f8fafc;
+            font-size: 1rem;
+        }
+
+        .cert-list span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            display: block;
+            margin-top: 0.2rem;
+        }
+
+        .job {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .job:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .job h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #f8fafc;
+        }
+
+        .job .date {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #bae6fd;
+            background: #0f172a;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .job .company {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        .job p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        .reference {
+            margin-top: 1rem;
+            padding: 0.8rem 1.2rem;
+            background-color: #0f172a;
+            border-left: 3px solid var(--secondary-color);
+            font-size: 0.85rem;
+            color: var(--text-light);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .reference strong {
+            color: var(--text-main);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Ariel Víctor Martinez</h1>
+            <div class="subtitle">
+                Operaciones y Seguridad Industrial | Control de Procesos | Prevención de Riesgos
+            </div>
+            
+            <div class="contact-info">
+                <span>📍 Santa Fe, Capital, Argentina</span>
+                <span>📱 <a href="tel:+543425962954">+54 342 5962954</a></span>
+                <span>✉️ <a href="mailto:ari.am629@gmail.com">ari.am629@gmail.com</a></span>
+                <span>💼 <a href="https://www.linkedin.com/in/ariel-victor-m-bb02361a7" target="_blank" rel="noopener noreferrer">Perfil de LinkedIn</a></span>
+            </div>
+        </header>
+
+        <div class="content-grid">
+            <aside class="left-col">
+                <div class="card extracto">
+                    <h2 class="section-title">Extracto</h2>
+                    <p>
+                        Profesional de la seguridad con un enfoque híbrido: combino la disciplina y el liderazgo como Instructor de Sipalki-Do con la capacidad técnica en Ciberseguridad y Gestión de Riesgos. Mi formación bajo estándares de Cisco y DisasterReady me permite analizar amenazas, mitigar vulnerabilidades y aplicar protocolos de contingencia en entornos críticos. Cuento con certificación vigente de RCP (COBEM) y movilidad propia.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h2 class="section-title">Competencias Clave</h2>
+                    <div class="skills">
+                        <span class="skill-tag">Supervisión de Seguridad</span>
+                        <span class="skill-tag">Monitoreo CCTV (IP/VMS)</span>
+                        <span class="skill-tag">Prevención de Riesgos</span>
+                        <span class="skill-tag">Ciberseguridad (Cisco)</span>
+                        <span class="skill-tag">Control de Procesos</span>
+                        <span class="skill-tag">Liderazgo de Equipos</span>
+                        <span class="skill-tag">Python & Microsoft 365</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 class="section-title">Formación Académica</h2>
+                    <ul class="cert-list">
+                        <li>
+                            <strong>Instituto de Capacitación FAGDUT</strong>
+                            <span>Terciario en curso, Diseño de Interfaz de Usuario (UI) y Diseño Gráfico.</span>
+                        </li>
+                        <li>
+                            <strong>Ministerio de Economía</strong>
+                            <span>Inteligencia Artificial para Empresas (2026).</span>
+                        </li>
+                        <li>
+                            <strong>COBEM SANTA FE</strong>
+                            <span>Certificación oficial en RCP y Primeros Auxilios (2025).</span>
+                        </li>
+                        <li>
+                            <strong>Cursos Complementarios</strong>
+                            <span>Gestión de datos con Microsoft 365, IA Generativa y Depuración en Python.</span>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <main class="right-col">
+                <div class="card">
+                    <h2 class="section-title">Experiencia Profesional</h2>
+                    
+                    <div class="job">
+                        <div class="job-header">
+                            <h3>Guardia de Seguridad</h3>
+                            <span class="date">Abr 2026 – Presente</span>
+                        </div>
+                        <div class="company">SI SE S.R.L | Santa Fe, Argentina</div>
+                        <p>
+                            Responsable del cuidado y vigilancia de importante droguería hospitalaria. Control estricto de accesos, monitoreo del perímetro de galpones y registro de ingreso/egreso de vehículos logísticos.
+                        </p>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <h3>Vigilador Eventual</h3>
+                            <span class="date">Ene 2026 – Abr 2026</span>
+                        </div>
+                        <div class="company">CV Seguridad | Santa Fe, Argentina</div>
+                        <p>
+                            Cobertura de seguridad integral en eventos deportivos organizados por la liga local. Encargado del control de accesos, supervisión de grandes flujos de público y prevención activa de incidentes en espacios de alta concurrencia, coordinando directamente con organizadores.
+                        </p>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <h3>Vigilador General – Monitoreo y Control</h3>
+                            <span class="date">Ene 2014 – Jun 2016</span>
+                        </div>
+                        <div class="company">La Colmena S.R.L. | Santa Fe, Argentina</div>
+                        <p>
+                            Aseguré la integridad del perímetro y de los activos estratégicos de la empresa. Logré una detección temprana de anomalías en el 100% de las rondas operativas mediante el uso de sistemas de registro digital y técnicas de vigilancia física proactiva.
+                        </p>
+                        <div class="reference">
+                            <strong>Referencia:</strong> administración@lacolmenasrl.com – (0342) 4556424
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <h3>Vigilador General y Rondas</h3>
+                            <span class="date">Ene 2010 – Abr 2013</span>
+                        </div>
+                        <div class="company">MEGA FORCE | Santa Fe, Argentina</div>
+                        <p>
+                            Optimicé la seguridad vial y logística vehicular en planta. Reduje significativamente los riesgos de incidentes en las zonas de carga y descarga operando tecnología de rastreo GPS, sistemas RFID y centros de monitoreo de cámaras IP.
+                        </p>
+                        <div class="reference">
+                            <strong>Referencia:</strong> Cristian Piedrabuena – 0342 15-429-8933
+                        </div>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <h3>Empleado en Prácticas (Operaciones)</h3>
+                            <span class="date">Ene 2005 – Dic 2012</span>
+                        </div>
+                        <div class="company">MicroQuin | Santa Fe, Argentina</div>
+                        <p>
+                            Cumplí con los objetivos de producción bajo estrictos estándares de seguridad industrial. Mantuve indicadores de calidad del 99% en el resguardo de la mercadería mediante la operación segura de maquinaria pesada y la aplicación de controles de inventario rigurosos.
+                        </p>
+                    </div>
+
+                </div>
+            </main>
+
+        </div>
+    </div>
+</body>
+</html>
